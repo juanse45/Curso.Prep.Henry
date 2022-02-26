@@ -116,10 +116,10 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
-  if(arguments.length===0){
+  if(arguments.length < 1){
     return 0;
   }
-  var multiplicación=0;
+  var multiplicación = 1;
   for(var i = 0; i < arguments.length; i++){
   multiplicación = multiplicación * arguments[i]
   }
@@ -203,8 +203,6 @@ function mayorACien(array) {
   }
   return mcien
 }
-
-
 function breakStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
   //Guardar cada nuevo valor en un array. 
@@ -213,6 +211,18 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var suma = numero;
+  var array =[];
+  for (var i = 0;i < 10;i++){
+    suma =suma + 2;
+     if(suma === i) {
+      return "Se interrumpió la ejecución";
+      break;
+     } else {
+    array.push(suma);
+    }
+  }
+  return array;
 }
 
 
@@ -223,6 +233,16 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  suma = numero;
+  arreglo = [];
+  for(var i = 0; i < 10; i++){
+    if (i===5) continue;
+    else {
+    suma = suma + 2;
+    arreglo.push(suma);
+    }
+  }
+  return arreglo
 }
 
 
